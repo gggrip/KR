@@ -8,4 +8,34 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\cloud_1_lvl1.png" />
+    <None Remove="Images\cloud_2_lvl1.png" />
+    <None Remove="Images\cloud_3_lvl1.png" />
+    <None Remove="Images\hills_lvl1.png" />
+    <None Remove="Images\hills_lvl2.png" />
+    <None Remove="Images\hills_lvl3_1.png" />
+    <None Remove="Images\hills_lvl3_2.png" />
+    <None Remove="Images\Light_lvl2.png" />
+    <None Remove="Images\Main_Bg_lvl1.png" />
+    <None Remove="Images\Main_Bg_lvl2.png" />
+    <None Remove="Images\Main_Bg_lvl3_1.png" />
+    <None Remove="Images\Main_Bg_lvl3_2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\cloud_1_lvl1.png" />
+    <Resource Include="Images\cloud_2_lvl1.png" />
+    <Resource Include="Images\cloud_3_lvl1.png" />
+    <Resource Include="Images\hills_lvl1.png" />
+    <Resource Include="Images\hills_lvl2.png" />
+    <Resource Include="Images\hills_lvl3_1.png" />
+    <Resource Include="Images\hills_lvl3_2.png" />
+    <Resource Include="Images\Light_lvl2.png" />
+    <Resource Include="Images\Main_Bg_lvl1.png" />
+    <Resource Include="Images\Main_Bg_lvl2.png" />
+    <Resource Include="Images\Main_Bg_lvl3_1.png" />
+    <Resource Include="Images\Main_Bg_lvl3_2.png" />
+  </ItemGroup>
+
 </Project>
