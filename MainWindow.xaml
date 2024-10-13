@@ -6,5 +6,10 @@
         xmlns:local="clr-namespace:KR"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" Background="{x:Null}">
-    <Grid x:Name="Main_menu" Background="#FFFCFCFC"/>
+    
+    <Grid x:Name="Main_menu_grid" Background="#FFFCFCFC">
+        <Canvas x:Name="Main_menu_can">
+            
+        </Canvas>
+    </Grid>
 </Window>

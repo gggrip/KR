@@ -24,6 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Styles\Main_menu.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Styles\Main_menu.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\cloud_1_lvl1.png" />
     <Resource Include="Images\cloud_2_lvl1.png" />
     <Resource Include="Images\cloud_3_lvl1.png" />
