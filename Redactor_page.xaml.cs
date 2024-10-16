@@ -23,15 +23,27 @@ namespace KR
         public Redactor_page()
         {
             InitializeComponent();
+            ResourceDictionary resourceDictionary = new ResourceDictionary();
+            resourceDictionary.Source = new Uri("Styles/Main_menu.xaml", UriKind.RelativeOrAbsolute);
+            this.Resources.MergedDictionaries.Add(resourceDictionary);
             List<Button> Titles = new List<Button>();
-            Titles.Add(Set_Button("pack://application:,,,/Images/Tiles/Tile_Road_lvl1.png", 80, 80, null));
-            for(int i = 1; i < 2; i++)
+            for (int i = 1; i < 6; i++)
             {
-                Titles.Add(Set_Button("pack://application:,,,/Images/Tiles/Tile_grass_" + Convert.ToString(i) + "_lvl1.png", 80, 80, (Style)this.Resources["Titles"]));
+                Titles.Add(Set_Button("pack://application:,,,/Images/Tiles/Tile_road_" +Convert.ToString(i)+ "_lvl1.png", 80, 80, (Style)this.Resources["Tiles"]));
+            }
+            for (int i = 1; i < 5; i++)
+            {
+                Titles.Add(Set_Button("pack://application:,,,/Images/Tiles/Tile_grass_" + Convert.ToString(i) + "_lvl1.png", 80, 80, (Style)this.Resources["Tiles"]));
             }
             for(int i = 0; i < Titles.Count(); i++)
             {
-                Redactor_Stack_pan.Children.Add(Titles[i]);
+                Redactor_ScrView_grid.Children.Add(Titles[i]);
+                if(i % 2 == 0)
+                {
+                    Redactor_ScrView_grid.RowDefinitions.Add(new RowDefinition());
+                }
+                Grid.SetRow(Titles[i], i/2);
+                Grid.SetColumn(Titles[i], i%2); 
             }
         }
         public Button Set_Button(string content, Style st)

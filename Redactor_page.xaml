@@ -10,17 +10,25 @@
 
     <Grid x:Name="Redactor_grid" Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="168" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <ScrollViewer x:Name="Redactor_ScrView">
-            <StackPanel x:Name="Redactor_Stack_pan">
-                
+            <StackPanel x:Name="Redactor_Stack_pan" Background="Gray">
+                <Grid x:Name="Redactor_ScrView_grid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                </Grid>
             </StackPanel>
         </ScrollViewer>
         <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-        <Grid x:Name="Redactor_map">
+        <Grid x:Name="Redactor_map" Background="Gray" Grid.Column="3">
             
         </Grid>
     </Grid>
