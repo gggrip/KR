@@ -29,7 +29,14 @@
     </Style>
     <Style x:Key="clouds" TargetType="Image">
         <Style.Setters>
-            
+
+        </Style.Setters>
+    </Style>
+    <Style x:Key="Tiles" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="80"/>
         </Style.Setters>
     </Style>
 </ResourceDictionary>
