@@ -16,6 +16,8 @@
             <MenuItem Header="Tiles" Click="Menu_Tiles_Click"></MenuItem>
             <MenuItem Header="Objects" Click="Menu_Object_Click"></MenuItem>
             <MenuItem Header="Back" Click="Menu_back_Click"></MenuItem>
+            <MenuItem Header="Save" Click="Menu_Save_Click"></MenuItem>
+            <MenuItem Header="Load" Click="Menu_Load_Click"></MenuItem>
         </Menu>
         <Grid x:Name="Redactor_grid" Background="White" Grid.Row="1">
             <Grid.ColumnDefinitions>

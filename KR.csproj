@@ -9,18 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\cloud_1_lvl1.png" />
-    <None Remove="Images\cloud_2_lvl1.png" />
-    <None Remove="Images\cloud_3_lvl1.png" />
-    <None Remove="Images\hills_lvl1.png" />
-    <None Remove="Images\hills_lvl2.png" />
-    <None Remove="Images\hills_lvl3_1.png" />
-    <None Remove="Images\hills_lvl3_2.png" />
-    <None Remove="Images\Light_lvl2.png" />
-    <None Remove="Images\Main_Bg_lvl1.png" />
-    <None Remove="Images\Main_Bg_lvl2.png" />
-    <None Remove="Images\Main_Bg_lvl3_1.png" />
-    <None Remove="Images\Main_Bg_lvl3_2.png" />
+    <Compile Remove="Maps\**" />
+    <EmbeddedResource Remove="Maps\**" />
+    <None Remove="Maps\**" />
+    <Page Remove="Maps\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Main_menu\cloud_1_lvl1.png" />
+    <None Remove="Images\Main_menu\cloud_2_lvl1.png" />
+    <None Remove="Images\Main_menu\cloud_3_lvl1.png" />
+    <None Remove="Images\Main_menu\hills_lvl1.png" />
+    <None Remove="Images\Main_menu\hills_lvl2.png" />
+    <None Remove="Images\Main_menu\hills_lvl3_1.png" />
+    <None Remove="Images\Main_menu\hills_lvl3_2.png" />
+    <None Remove="Images\Main_menu\Light_lvl2.png" />
+    <None Remove="Images\Main_menu\Main_Bg_lvl1.png" />
+    <None Remove="Images\Main_menu\Main_Bg_lvl2.png" />
+    <None Remove="Images\Main_menu\Main_Bg_lvl3_1.png" />
+    <None Remove="Images\Main_menu\Main_Bg_lvl3_2.png" />
     <None Remove="Images\Objects\House\House_Door_Close_lvl1.png" />
     <None Remove="Images\Objects\House\House_Door_Open_lvl1.png" />
     <None Remove="Images\Objects\House\House_lvl1.png" />
@@ -42,14 +49,25 @@
     <None Remove="Images\Tiles\Tile_road_7_lvl1.png" />
     <None Remove="Images\Tiles\Tile_road_8_lvl1.png" />
     <None Remove="Images\Tiles\Tile_road_9_lvl1.png" />
-    <None Remove="Images\Tiles\Tile_Road_lvl1.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="Styles\Main_menu.xaml" />
+    <Folder Include="Styles\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Main_menu\cloud_1_lvl1.png" />
+    <Resource Include="Images\Main_menu\cloud_2_lvl1.png" />
+    <Resource Include="Images\Main_menu\cloud_3_lvl1.png" />
+    <Resource Include="Images\Main_menu\hills_lvl1.png" />
+    <Resource Include="Images\Main_menu\hills_lvl2.png" />
+    <Resource Include="Images\Main_menu\hills_lvl3_1.png" />
+    <Resource Include="Images\Main_menu\hills_lvl3_2.png" />
+    <Resource Include="Images\Main_menu\Light_lvl2.png" />
+    <Resource Include="Images\Main_menu\Main_Bg_lvl1.png" />
+    <Resource Include="Images\Main_menu\Main_Bg_lvl2.png" />
+    <Resource Include="Images\Main_menu\Main_Bg_lvl3_1.png" />
+    <Resource Include="Images\Main_menu\Main_Bg_lvl3_2.png" />
     <Resource Include="Images\Objects\House\House_Door_Close_lvl1.png" />
     <Resource Include="Images\Objects\House\House_Door_Open_lvl1.png" />
     <Resource Include="Images\Objects\House\House_lvl1.png" />
@@ -71,26 +89,6 @@
     <Resource Include="Images\Tiles\Tile_road_7_lvl1.png" />
     <Resource Include="Images\Tiles\Tile_road_8_lvl1.png" />
     <Resource Include="Images\Tiles\Tile_road_9_lvl1.png" />
-    <Resource Include="Styles\Main_menu.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\Main_menu\cloud_1_lvl1.png" />
-    <Resource Include="Images\Main_menu\cloud_2_lvl1.png" />
-    <Resource Include="Images\Main_menu\cloud_3_lvl1.png" />
-    <Resource Include="Images\Main_menu\hills_lvl1.png" />
-    <Resource Include="Images\Main_menu\hills_lvl2.png" />
-    <Resource Include="Images\Main_menu\hills_lvl3_1.png" />
-    <Resource Include="Images\Main_menu\hills_lvl3_2.png" />
-    <Resource Include="Images\Main_menu\Light_lvl2.png" />
-    <Resource Include="Images\Main_menu\Main_Bg_lvl1.png" />
-    <Resource Include="Images\Main_menu\Main_Bg_lvl2.png" />
-    <Resource Include="Images\Main_menu\Main_Bg_lvl3_1.png" />
-    <Resource Include="Images\Main_menu\Main_Bg_lvl3_2.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Maps\" />
   </ItemGroup>
 
 </Project>
