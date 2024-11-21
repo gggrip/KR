@@ -15,6 +15,7 @@
         <Menu Grid.Row="0">
             <MenuItem Header="Tiles" Click="Menu_Tiles_Click"></MenuItem>
             <MenuItem Header="Objects" Click="Menu_Object_Click"></MenuItem>
+            <MenuItem Header="Col" Click="Menu_Col_Click"></MenuItem>
             <MenuItem Header="Back" Click="Menu_back_Click"></MenuItem>
             <MenuItem Header="Save" Click="Menu_Save_Click"></MenuItem>
             <MenuItem Header="Load" Click="Menu_Load_Click"></MenuItem>
@@ -39,9 +40,12 @@
                 </StackPanel>
             </ScrollViewer>
             <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-            <Canvas x:Name="Redactor_map_can" Background="Gray" Grid.Column="3" MouseMove="Mouse_move" MouseDown="Mouse_click">
+            <Canvas x:Name="Redactor_map_can" Background="Gray" Grid.Column="3" MouseMove="Mouse_move_obj" MouseDown="Mouse_click_add_obj">
                 <Grid x:Name="Redactor_map" Background="Gray" ShowGridLines="True" Panel.ZIndex="0">
 
+                </Grid>
+                <Grid x:Name="Redactor_map_col" Background="Gray" ShowGridLines="True" Panel.ZIndex="1" Opacity="0.4" Visibility="Collapsed">
+                    
                 </Grid>
             </Canvas>
         </Grid>

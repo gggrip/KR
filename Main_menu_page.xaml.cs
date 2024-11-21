@@ -25,13 +25,15 @@ namespace KR
         public Main_menu_page()
         {
             InitializeComponent();
+            //Загрузка ресурсов
             ResourceDictionary resourceDictionary = new ResourceDictionary();
             resourceDictionary.Source = new Uri("Styles/Main_menu.xaml", UriKind.RelativeOrAbsolute);
             this.Resources.MergedDictionaries.Add(resourceDictionary);
+            //Установка размеров окна
             Main_menu_can.Width = 1920;
             Main_menu_can.Height = 1080;
-            Main_menu_can.Children.Add(Set_Image("Images/Main_menu/Main_Bg_lvl1.png", 1920, 1080));
-            List<Image> clouds = new List<Image>();
+            Main_menu_can.Children.Add(Set_Image("Images/Main_menu/Main_Bg_lvl1.png", 1920, 1080)); //Установка заднего фона(небо)
+            List<Image> clouds = new List<Image>();//Настройка облаков
             for (int i = 1; i < 4; i++)
             {
                 clouds.Add(Set_Image("Images/Main_menu/cloud_" + Convert.ToString(i) + "_lvl1.png", 800, 250));
@@ -40,7 +42,8 @@ namespace KR
                 Main_menu_can.Children.Add(clouds[i - 1]);
                 MoveImage(clouds[i - 1], -800 * i, 1920, (800 * i + 1920) / 54.4);
             }
-            Main_menu_can.Children.Add(Set_Image("Images/Main_menu/hills_lvl1.png", 1920, 1080));
+            Main_menu_can.Children.Add(Set_Image("Images/Main_menu/hills_lvl1.png", 1920, 1080)); //Установка заднего фона(земля)
+            //Настройки кнопок 
             Button button;
             button = Set_Button("Play", (Style)this.Resources["lvl1"]);
             Canvas.SetLeft(button, (Main_menu_can.Width - button.Width) / 2);
@@ -55,13 +58,8 @@ namespace KR
             Canvas.SetLeft(button, (Main_menu_can.Width - button.Width) / 2);
             Canvas.SetTop(button, (Main_menu_can.Height + button.Height * 2) / 2);
             Main_menu_can.Children.Add(button);
-            DispatcherTimer _timer = new DispatcherTimer();
-            _timer.Interval = TimeSpan.FromMilliseconds(50);
-            //_timer.Tick += MoveButton;
-            _timer.Start();
-            //Main_menu.Children.Add(Set_Image("C:\\Users\\ПК\\Desktop\\Kyrs\\KR\\Images\\Light_lvl2.png", 1920, 1080));
         }
-        public Image Set_Image(string image_name, double Widht, double Height)
+        public Image Set_Image(string image_name, double Widht, double Height) //Функция создания изображения
         {
             Image image = new Image();
             image.Width = Widht;
@@ -73,7 +71,7 @@ namespace KR
             image.Source = bitmap;
             return image;
         }
-        public Button Set_Button(string content, Style st)
+        public Button Set_Button(string content, Style st) //Функция создания кнопки
         {
             Button button = new Button();
             button.Content = content;
@@ -81,7 +79,7 @@ namespace KR
             button.Style = st;
             return button;
         }
-        private void MoveImage(Image image, double fromX, double toX, double duraction)
+        private void MoveImage(Image image, double fromX, double toX, double duraction)//Анимация движения облаков
         {
             DoubleAnimation moveXAnimation = new DoubleAnimation()
             {
@@ -102,7 +100,7 @@ namespace KR
             };
             storyboard.Begin();
         }
-        private void Redactor_Click(object sender, RoutedEventArgs e)
+        private void Redactor_Click(object sender, RoutedEventArgs e)//Перенос в редактор
         {
             NavigationService.Navigate(new Redactor_page());
         }

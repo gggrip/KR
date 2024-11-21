@@ -30,19 +30,19 @@ namespace KR
     public class Map
     {
         [XmlArray]
-        public List<bool> col;
+        public List<List<int>> col;
         [XmlArray]
         public List<Map_obj> objj;
         [XmlArray]
         public List<string> tiless;
         public Map()
         {
-            col = new List<bool>();
+            col = new List<List<int>>();
             objj = new List<Map_obj>();
             tiless = new List<string>();
 
         }
-        public Map(List<bool> col, List<Map_obj> objj, List<string> tiless)
+        public Map(List<List<int>> col, List<Map_obj> objj, List<string> tiless)
         {
             this.col = col;
             this.objj = objj;
@@ -53,7 +53,7 @@ namespace KR
         {
             for (int i = 0; i < n; i++)
             {
-                col.Add(true);
+                col.Add([]);
                 tiless.Add("");
             }
         }
@@ -76,7 +76,7 @@ namespace KR
                 MessageBox.Show(Convert.ToString(pos));
             }
         }
-        public void red_col(bool col,int pos)
+        public void red_col(List<int> col,int pos)
         {
             this.col[pos] = col;
         }

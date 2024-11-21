@@ -39,4 +39,12 @@
             <Setter Property="Height" Value="80"/>
         </Style.Setters>
     </Style>
+    <Style x:Key="Col" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style.Setters>
+    </Style>
 </ResourceDictionary>
