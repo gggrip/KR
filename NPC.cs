@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Xml.Serialization;
 
 /*
  
@@ -12,17 +13,30 @@ using System.Windows.Media.Imaging;
 
 namespace KR
 {
-    abstract internal class NPC
+    [XmlInclude(typeof(Vilag))]
+    abstract public class NPC
     {
+        [XmlElement]
+        public int number_dialog {  get; set; }
+        [XmlElement]
         public string Name { get; set; }
+        [XmlElement]
         public int pos;
+        [XmlArray]
         public List<string> images;
+        [XmlElement]
         public int HP { get; set; }
+        [XmlElement]
         public int Damage { get; set; }
-        public int v { get; set; }
-        public int x { get; set; }
-        public int y { get; set; }
-        List<string> dialog;
+        [XmlElement]
+        public double v { get; set; }
+        [XmlElement]
+        public double x { get; set; }
+        [XmlElement]
+        public double y { get; set; }
+        [XmlArray]
+        public List<string> dialog;
+        [XmlElement]
         public int attitude {  get; set; }
         public virtual void Set_pos(int pos)
         {
@@ -39,7 +53,7 @@ namespace KR
                 dialog.Add(dialog_way[i]);
             }
         }
-        public virtual void Set_Position(int x, int y)
+        public virtual void Set_Position(double x, double y)
         {
             this.x = x;
             this.y = y;
@@ -67,6 +81,21 @@ namespace KR
         public virtual int Get_Damage()
         {
             return this.Damage;
+        }
+    }
+    [XmlType]
+    public class Vilag : NPC
+    {
+        public Vilag()
+        {
+            this.attitude = 0;
+            this.Damage = 5;
+            this.HP = 20;
+            this.v = 30;
+            this.number_dialog = 0;
+            this.pos = 0;
+            this.images = new List<string>();
+            this.dialog = new List<string>();
         }
     }
     internal class Hero : NPC

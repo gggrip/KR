@@ -35,18 +35,21 @@ namespace KR
         public List<Map_obj> objj;
         [XmlArray]
         public List<string> tiless;
+        [XmlArray]
+        public List<NPC> vilags;
         public Map()
         {
             col = new List<List<int>>();
             objj = new List<Map_obj>();
             tiless = new List<string>();
-
+            vilags = new List<NPC>();
         }
-        public Map(List<List<int>> col, List<Map_obj> objj, List<string> tiless)
+        public Map(List<List<int>> col, List<Map_obj> objj, List<string> tiless, List<NPC> vilags)
         {
             this.col = col;
             this.objj = objj;
             this.tiless = tiless;
+            this.vilags = vilags;
         }
 
         public void add_Map_tile(int n)
@@ -83,6 +86,14 @@ namespace KR
         public void remove_Map_obj(double x, double y)
         {
             objj.Remove(objj.FirstOrDefault(p => p.x == x && p.y == y));
+        }
+        public void add_Npc(Vilag vilag)
+        {
+            this.vilags.Add(vilag);
+        }
+        public void red_Npc(Vilag vilag,int pos)
+        {
+            this.vilags[pos] = vilag;
         }
     }
 }

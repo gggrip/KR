@@ -32,6 +32,7 @@
     <None Remove="Images\Main_menu\Main_Bg_lvl2.png" />
     <None Remove="Images\Main_menu\Main_Bg_lvl3_1.png" />
     <None Remove="Images\Main_menu\Main_Bg_lvl3_2.png" />
+    <None Remove="Images\Npc\Test_NPC.png" />
     <None Remove="Images\Objects\House\House_Door_Close_lvl1.png" />
     <None Remove="Images\Objects\House\House_Door_Open_lvl1.png" />
     <None Remove="Images\Objects\House\House_lvl1.png" />
@@ -76,6 +77,7 @@
     <Resource Include="Images\Main_menu\Main_Bg_lvl2.png" />
     <Resource Include="Images\Main_menu\Main_Bg_lvl3_1.png" />
     <Resource Include="Images\Main_menu\Main_Bg_lvl3_2.png" />
+    <Resource Include="Images\Npc\Test_NPC.png" />
     <Resource Include="Images\Objects\House\House_Door_Close_lvl1.png" />
     <Resource Include="Images\Objects\House\House_Door_Open_lvl1.png" />
     <Resource Include="Images\Objects\House\House_lvl1.png" />
